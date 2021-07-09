@@ -55,6 +55,11 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      visibility: hidden;
+      width: 0;
+    }
   }
 
   &__right {
@@ -62,6 +67,10 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__img {
